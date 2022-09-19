@@ -224,12 +224,7 @@ export function createGetIronSession(
   };
 }
 
-function addToCookies(cookieValue: string, res: ResponseType) {
-  if ("headers" in res) {
-    res.headers.append("set-cookie", cookieValue);
-    return;
-  }
-
+function addToCookies(cookieValue: string, res: any) {
   let existingSetCookie =
     (res.getHeader("set-cookie") as string[] | string) ?? [];
   if (typeof existingSetCookie === "string") {
