@@ -57,7 +57,6 @@
     "build:express": "tsup express/index.ts -d express/dist",
     "build:next": "tsup next/index.ts -d next/dist",
     "build:src": "tsup src/index.ts",
-    "install": "npm run build",
     "installExamples": "(cd examples/express && npm ci) && (cd examples/next.js && npm ci) && (cd examples/next.js-typescript && npm ci)",
     "lint": "eslint --ext ts,js,jsx,tsx src/ next/ express/ edge/ examples/",
     "prepublishOnly": "npm run build && cp next/dist/* next/ && cp express/dist/* express/ && cp edge/dist/* edge/",
